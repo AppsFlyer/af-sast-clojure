@@ -1,0 +1,20 @@
+{:paths ["src" "resources"]
+ :deps {borkdude/grasp{:git/url "https://github.com/borkdude/grasp"
+                      :sha "97bac55bc88ec1de659a0121e8b5ef59ab72a346"}
+        cheshire/cheshire {:mvn/version "5.10.0"}
+        org.clojure/tools.cli {:mvn/version "1.0.194"}
+        clj-time/clj-time {:mvn/version "0.15.2"}
+        digest/digest {:mvn/version "1.4.9"}
+        org.clojure/clojure {:mvn/version "1.10.1"}}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "1.0.0"}}}
+  :runner
+  {:extra-deps {com.cognitect/test-runner
+                {:git/url "https://github.com/cognitect-labs/test-runner"
+                 :sha "b6b3193fcc42659d7e46ecd1884a228993441182"}}
+   :main-opts ["-m" "cognitect.test-runner"
+               "-d" "test"]}
+  :uberjar {:extra-deps {seancorfield/depstar {:mvn/version "1.1.128"}}
+            :main-opts ["-m" "hf.depstar.uberjar" "target/clj-scanner.jar"
+                        "-C" "-m" "af_sast_clojure.clj-scanner"]}}}

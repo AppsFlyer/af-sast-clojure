@@ -1,0 +1,22 @@
+<TaskOptions>
+    <TaskOptions>
+        <option name="arguments" value="-jar /usr/local/bin/clj-scanner.jar -d $FileName$" />
+        <option name="checkSyntaxErrors" value="true" />
+        <option name="description" />
+        <option name="exitCodeBehavior" value="ERROR" />
+        <option name="fileExtension" value="clj" />
+        <option name="immediateSync" value="true" />
+        <option name="name" value="Scanner" />
+        <option name="output" value="" />
+        <option name="outputFilters">
+            <array />
+        </option>
+        <option name="outputFromStdout" value="false" />
+        <option name="program" value="java" />
+        <option name="runOnExternalChanges" value="true" />
+        <option name="scopeName" value="All Places" />
+        <option name="trackOnlyRoot" value="false" />
+        <option name="workingDir" value="" />
+        <envs />
+    </TaskOptions>
+</TaskOptions>
